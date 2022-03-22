@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvOnline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/online"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvOrderFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shopSusi"
+            app:layout_constraintStart_toStartOf="@id/tvOnline"
+            app:layout_constraintTop_toBottomOf="@id/tvOnline" />
+        <ImageView
+            android:id="@+id/ivCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shape_circle"
+            app:layout_constraintStart_toEndOf="@id/tvOrderFood"
+            app:layout_constraintTop_toTopOf="@id/tvOrderFood" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_close_btn"
+            app:layout_constraintBottom_toBottomOf="@id/tvOrderFood"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivCircle" />
+
+        <TextView
+            android:id="@+id/tvBascket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="44dp"
+            android:text="@string/bascket"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvOrderFood" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSoup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_corner_order"
+            android:elevation="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tvBascket"
+            tools:layout_editor_absoluteX="8dp">
+
+            <ImageView
+                android:id="@+id/ivSoup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/ic_soup"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvPriceSoup"
+                android:layout_width="42dp"
+                android:layout_height="20dp"
+                android:background="@drawable/rounded_price"
+                android:backgroundTint="@color/black"
+                android:padding="4dp"
+                android:text="@string/pricesoup"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvSoupOrder"
+                app:layout_constraintEnd_toEndOf="@id/tvSoupDescription" />
+
+            <TextView
+                android:id="@+id/tvSoupDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/soupdescription"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvSoupOrder"
+                app:layout_constraintStart_toEndOf="@+id/ivSoup"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+
+            <TextView
+                android:id="@+id/tvSoupOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quantitysoup"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvSoupDescription"
+                app:layout_constraintTop_toBottomOf="@+id/tvSoupDescription" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_close_btn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#A1A1A1" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clRoll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner_order"
+            android:elevation="8dp"
+            app:layout_constraintTop_toBottomOf="@id/clSoup"
+            tools:layout_editor_absoluteX="8dp">
+
+            <ImageView
+                android:id="@+id/ivRoll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/ic_roll"
+                app:layout_constraintStart_toStartOf="@id/clRoll"
+                app:layout_constraintTop_toTopOf="@id/clRoll" />
+
+            <TextView
+                android:id="@+id/tvRoll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/roll"
+                app:layout_constraintBottom_toTopOf="@+id/tvRollOrder"
+                app:layout_constraintStart_toEndOf="@+id/ivRoll"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tvRollOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quantityroll"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivRoll"
+                app:layout_constraintTop_toBottomOf="@+id/tvRoll" />
+
+            <TextView
+                android:id="@+id/tvRollPrice"
+                android:layout_width="42dp"
+                android:layout_height="20dp"
+                android:background="@drawable/rounded_price"
+                android:backgroundTint="@color/black"
+                android:padding="4dp"
+                android:text="@string/priceroll"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvRollOrder"
+                app:layout_constraintEnd_toEndOf="@id/tvRoll" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_close_btn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#A1A1A1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clCroissant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner_order"
+            android:elevation="8dp"
+            app:layout_constraintTop_toBottomOf="@id/clRoll"
+            tools:layout_editor_absoluteX="8dp">
+
+            <ImageView
+                android:id="@+id/ivCroissant"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/ic_dessert_croissant"
+                app:layout_constraintStart_toStartOf="@id/clCroissant"
+                app:layout_constraintTop_toTopOf="@id/clCroissant" />
+
+            <TextView
+                android:id="@+id/tvCroissant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/dessertcroissantdescription"
+                app:layout_constraintBottom_toTopOf="@+id/tvCroissantOrder"
+                app:layout_constraintStart_toEndOf="@+id/ivCroissant"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tvCroissantOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/quantityroll"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivCroissant"
+                app:layout_constraintTop_toBottomOf="@+id/tvCroissant" />
+
+            <TextView
+                android:id="@+id/tvCroisantPrice"
+                android:layout_width="42dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="96dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/rounded_price"
+                android:backgroundTint="@color/black"
+                android:padding="4sp"
+                android:paddingStart="8dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="2dp"
+                android:text="@string/priceroll"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvCroissantOrder"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnCloseCroissant" />
+
+            <ImageView
+                android:id="@+id/btnCloseCroissant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_close_btn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#A1A1A1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvCommentOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:text="@string/comment"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clCroissant" />
+
+        <TextView
+            android:id="@+id/edComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="top"
+            android:hint="Укажите дополнительную информацию \n к заказу"
+            android:minLines="10"
+            android:padding="8dp"
+            android:paddingTop="16sp"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCommentOrder" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/edComment"
+            app:layout_constraintStart_toStartOf="@id/edComment"
+            app:layout_constraintTop_toBottomOf="@id/edComment" />
+
+        <TextView
+            android:id="@+id/tvAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/additionally"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edComment" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/btnSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:checked="true"
+            android:fontFamily="@font/roboto"
+            android:text="@string/delivery"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAdd" />
+
+        <RadioGroup
+            android:id="@+id/rbtPay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/btnSwitch">
+
+
+            <RadioButton
+                android:id="@+id/rbPayCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layoutDirection="rtl"
+                android:text="@string/paycard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbtPay" />
+
+
+            <RadioButton
+                android:id="@+id/rbPayMoney"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layoutDirection="rtl"
+                android:text="@string/paymoney"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbPayCard" />
+        </RadioGroup>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/green"
+            android:elevation="40dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/button_order"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rbtPay"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

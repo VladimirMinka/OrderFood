@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">OrderFoods</string>
+    <string name="button_back">НАЗАД</string>
+    <string name="agreement">Авторизуясь я соглашаюсь с <u>условиями использования</u></string>
+    <string name="paycard">Оплата картой</string>
+    <string name="button_order">ЗАКАЗАТЬ</string>
+    <string name="paymoney">Оплата наличными</string>
+    <string name="delivery">Самовывоз</string>
+    <string name="button_authorization">НАЧАТЬ</string>
+    <string name="tv_authorization">Пропустить</string>
+    <string name="authorization">Авторизация</string>
+    <string name="phonenumber">+7 800 2222 600</string>
+    <string name="contactNumber">Конт.номер - </string>
+    <string name="online">Online</string>
+    <string name="shopSusi">Магазин Суши</string>
+    <string name="bascket">КОРЗИНА</string>
+    <string name="soupdescription">Том Ям суп с морепродуктами</string>
+    <string name="roll">Сет запеченная Филадельфия</string>
+    <string name="quantitysoup">Кол-во: 2 шт.</string>
+    <string name="pricesoup">470 ₽</string>
+    <string name="quantityroll">Кол-во: 1 шт.</string>
+    <string name="priceroll">115 ₽</string>
+    <string name="dessertcroissantdescription">Десерт круассан с грецкими </string>
+    <string name="comment">Комментарий</string>
+    <string name="additionally">Дополнительно</string>
+
+</resources>
